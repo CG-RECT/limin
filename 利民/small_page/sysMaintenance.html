@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+		}
+		#content{
+			position: relative;
+			height: 600px;
+			margin: 0 auto;
+		}
+		#list,#show{
+			position: absolute;
+			height: 100%;
+		}
+		#list{
+			left: 0;
+			width: 180px;
+			background: #18476B;
+		}
+		#show{
+			margin-top: 20px;
+			left: 200px;
+			right: 0px;
+		}
+		
+		/*list*/
+		#list ul {
+			/*width: 80%;*/
+			display: block;
+			color:#FFF;
+		}
+		li{	
+			list-style: none;
+			cursor: default;
+		}
+		.listMenu{
+			font-size: 14px;
+			padding: 8px 20px;
+		}
+		.subListMenu{
+			padding: 5px 20px;
+			font-size: 12px;
+		}
+		.unfold{
+			position: absolute;
+		    right: 0;
+		    top: 50%;
+		    width: 15px;
+		    height: 35px;
+		    text-align: center;
+		    line-height: 35px;
+		    color: #FFF;
+		    background: #3299EA;
+		    cursor: pointer;
+		}
+		/*list end*/
+		.small_button{
+			width: 50px;
+			height: 30px;
+			margin-left: 20px;
+		}
+		/*show*/		
+		tr:nth-child(even) td{
+			background: #F5F5F5;
+		}
+		tr:nth-child(odd) td{
+			background: #FFF;
+		}
+		/** log **/
+		#log_table{
+			width: 100%;
+		}
+		.log_title,.log_subTitle{
+			height: 40px;
+			line-height: 40px;
+		}
+		#log_table tr{
+			display: block;
+		}
+		#log_table td{
+			font-size: 14px;
+    		color: #373737;
+			height: 50px;
+			line-height: 50px;
+			display: block;
+			float: left;
+			width: 20%;
+			text-align: center;
+		}
+		.log_title{
+			width: 100%;
+		}
+		.log_subTitle{
+			line-height: 40px;
+			text-align: center;
+			width: 20%;
+			float: left;
+			background: #E7E7E7;
+		}
+		/** user **/
+		.user_title{
+			width: 100%;
+		}
+		.user_subTitle{
+			line-height: 40px;
+			text-align: center;
+			float: left;
+			background-color: #E7E7E7;
+		}
+		.user_subTitle:nth-child(1){
+			width: 20%;
+		}
+		.user_subTitle:nth-child(2){
+			width: 10%;
+		}
+		.user_subTitle:nth-child(3){
+			width: 20%;
+		}
+		.user_subTitle:nth-child(4){
+			width: 15%;
+		}
+		.user_subTitle:nth-child(5){
+			width: 15%;
+		}
+		.user_subTitle:nth-child(6){
+			width: 20%;
+		}
+		#user{
+			width: 100%;
+			height: 500px;
+			/*background: black;*/
+		}		
+		#user_table{
+			width: 100%;
+		}
+		#user_table tr{
+			display: block;
+		}
+		#user_table td{
+			font-size: 14px;
+    		color: #373737;
+			height: 50px;
+			line-height: 50px;
+			display: block;
+			float: left;
+			width: 20%;
+			text-align: center;
+		}
+		#user_table td:nth-child(1){
+			width: 20%;
+		}
+		#user_table td:nth-child(2){
+			width: 10%;
+		}
+		#user_table td:nth-child(3){
+			width: 20%;
+		}
+		#user_table td:nth-child(4){
+			width: 15%;
+		}
+		#user_table td:nth-child(5){
+			width: 15%;
+		}
+		#user_table td:nth-child(6){
+			width: 20%;
+		}
+		#newUser{
+			width: 100%;
+			height: 500px;
+			background: red;
+		}
+		#editUser{
+			width: 100%;
+			height: 500px;
+			background: green;
+		}
+		/*show end*/
+	</style>
+</head>
+<body>
+<div id="content">
+	<div id="list">
+		<ul>
+			<li class="listMenu" style="background: #FFF;color: #1D7998;" onclick="change(this,'log')">日志</li>
+			<li class="listMenu" onclick="change(this,'user')">角色管理</li>
+			<li class="subListMenu" onclick="change(this,'newUser')">新建</li>
+			<li class="subListMenu" onclick="change(this,'editUser')">编辑</li>
+		</ul>
+		<div class="unfold" onclick="fold(this)"></div>
+	</div>
+	<div id="show">
+		<div id="log">
+			<div class="log_title">
+				<div class="log_subTitle">序号</div>
+				<div class="log_subTitle">用户</div>
+				<div class="log_subTitle">时间</div>
+				<div class="log_subTitle">行为</div>
+				<div class="log_subTitle">IP</div>
+			</div>
+			<table id="log_table"></table>	
+		</div>
+		<div id="user" style="display: none;">
+			<div class="user_title">
+				<div class="user_subTitle">角色名称</div>
+				<div class="user_subTitle">成员数量</div>
+				<div class="user_subTitle">创建时间</div>
+				<div class="user_subTitle">创建者</div>
+				<div class="user_subTitle">使用情况</div>
+				<div class="user_subTitle">操作</div>
+			</div>
+			<table id="user_table"></table>
+		</div>
+		<div id="newUser" style="display: none;"></div>
+		<div id="editUser" style="display: none;"></div>
+	</div>
+</div>
+<script type="text/javascript">
+    var currentLi_a = document.getElementsByClassName("listMenu")[0];
+    var currentDiv = document.getElementById("log");
+    //to the log table
+    function forTable_log(){
+    	var table = document.getElementById("log_table");
+		var tableInnerHTML = "";
+		var trbody= "";
+		var data = ["1","zhangsan","2017-06-01","login","192.168.0.1"];
+		for (var i = 0; i < 10; i++) {
+			trbody+="<tr>";
+			for (var j = 0; j < 5; j++) {
+				trbody+="<td>";
+				trbody+=data[j];
+				trbody+="</td>";
+			}
+			trbody+="</tr>";
+		}
+		tableInnerHTML +=trbody;
+		table.innerHTML = tableInnerHTML;
+    }
+    forTable_log();
+    //to the user table 
+    function forTable_user(){
+    	var table = document.getElementById("user_table");
+    	var tableInnerHTML = "";
+    	var tbody = "";
+    	var data = ["超级管理员","1","2017-06-01 20:55:37","admin","正常","<button class=\"small_button\">编辑</button><button class=\"small_button\">删除</button>"];
+    	for (var i = 0; i < 6; i++){
+    		tbody += "<tr>";
+    		for (var j = 0; j < 6; j++){
+    			tbody+="<td>";
+    			tbody+=data[j];
+    			tbody+="</td>";
+    		}
+    		tbody+="</tr>";
+    	}
+    	tableInnerHTML += tbody;
+    	table.innerHTML = tableInnerHTML;
+    }
+    forTable_user();
+	function changeStyle(li_a){
+		if (li_a!=currentLi_a) {
+			currentLi_a.style.background = "#18476B";
+			currentLi_a.style.color = "#FFF";
+			currentLi_a = li_a;
+			currentLi_a.style.background = "#FFF";
+			currentLi_a.style.color = "#18476B";
+		}
+	}
+	function changeDisplay(div_id){
+		var _div = document.getElementById(div_id);
+		if(_div!=currentDiv){
+			currentDiv.style.display = "none";
+			currentDiv = _div;
+			currentDiv.style.display = "block";
+		}
+	}
+	function change(li,id){
+		changeStyle(li);
+		changeDisplay(id);
+	}
+	function fold(btn){
+		// var list = document.getElementById("list");
+		// list.style.left = -200 + 'px'; 
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SaaS后台管理系统</title>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<script type="text/javascript">
+		function switchMenu(parm){
+			var pag_top_if = document.getElementById("page_iframe");
+			if (parm.id  == "page_top_help") {
+				pag_top_if.src = "./small_page/useHelp.html";
+			}else if (parm.id  == "page_top_sysMend") {
+				pag_top_if.src = "./small_page/sysMaintenance.html";
+			}else if (parm.id  == "page_top_tabM") {
+				pag_top_if.src = "./small_page/useHelp.html";
+			}else if (parm.id  == "page_top_payM") {
+				pag_top_if.src = "./small_page/sysMaintenance.html";
+			}else if (parm.id  == "page_top_userM") {
+				pag_top_if.src = "./small_page/useHelp.html";
+			}else if (parm.id  == "page_top_mendS") {
+				pag_top_if.src = "./small_page/sysMaintenance.html";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="page_content">
+		<div class="page_top">
+			<ul class="page_top_left">
+				<li class="left_big">利民SaaS</li>
+				<li class="left_middle">后台管理系统</li>
+			</ul>
+			<ul class="page_top_right">
+				<li>
+					<img src="./image/admin.png">
+					<span>admin</span>
+				</li>
+				<li>
+					<img src="./image/lock.png">
+					<span>修改密码</span>
+				</li>
+				<li>
+					<img src="./image/exit.png">
+					<span>退出</span>
+				</li>
+			</ul>
+		</div>
+		<div class="page_navigation">
+			<ul>
+				<li id="page_top_help" onclick="switchMenu(this)">使用帮助</li>
+				<li id="page_top_sysMend" onclick="switchMenu(this)">系统维护</li>
+				<li id="page_top_tabM" onclick="switchMenu(this)">抄表管理</li>
+				<li id="page_top_payM" onclick="switchMenu(this)">缴费管理</li>
+				<li id="page_top_userM" onclick="switchMenu(this)">用户管理</li>
+				<li id="page_top_mendS" onclick="switchMenu(this)">保修管理</li>
+			</ul>
+		</div>
+		<div class="page_html">
+			<iframe src="./small_page/useHelp.html" id="page_iframe" frameborder="0"></iframe>
+		</div>
+	</div>
+</body>
+</html>
