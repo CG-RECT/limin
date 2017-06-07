@@ -5,6 +5,7 @@
 	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../css/sysMaintenance.css">
+	<script type="text/javascript" src="../js/vendor/jquery-1.9.1.min.js"></script>
 </head>
 <body>
 <div id="content">
@@ -15,8 +16,8 @@
 			<li class="subListMenu" onclick="change(this,'newUser')">新建</li>
 			<li class="subListMenu" onclick="change(this,'editUser')">编辑</li>
 		</ul>
-		<div class="unfold" onclick="fold(this)"></div>
 	</div>
+	<div id="unfold" onclick="fold(this)"></div>
 	<div id="show">
 		<div id="log">
 			<div class="log_title">
@@ -39,8 +40,126 @@
 			</div>
 			<table id="user_table"></table>
 		</div>
-		<div id="newUser" style="display: none;"></div>
-		<div id="editUser" style="display: none;"></div>
+		<div id="newUser" style="display: none;">
+			<div class="newUser_title">
+				<div class="newUser_top">
+					<div class="name_input">
+						<span>角色名称</span>
+						<input type="text" name="">
+					</div>
+					<div class="des_input">
+						<span>角色描述</span>
+						<input type="text" name="">
+					</div>
+				</div>
+				<div class="newUser_middle">
+					<span>功能权限</span>
+					<table>
+						<tr>
+							<td>抄表管理</td>
+							<td>
+								<span><input type="radio" name="name1">抄表录入 </span>
+								<span><input type="radio" name="name1" >抄表列表 </span>
+								<span><input type="radio" name="name1" >保修提交 </span>
+							</td>
+						</tr>
+						<tr>
+							<td>缴费管理</td>
+							<td>
+								<span><input type="radio" name="name2" >缴费统计 </span>
+								<span><input type="radio" name="name2" >缴费录入 </span>
+								<span><input type="radio" name="name2" >逾期 </span>
+								<span><input type="radio" name="name2" >打印收据 </span>
+								<span><input type="radio" name="name2" >收费明细 </span>
+							</td>
+						</tr>
+						<tr>
+							<td>用户管理</td>
+							<td>
+								<span><input type="radio" name="name3" >用户列表 </span>
+								<span><input type="radio" name="name3" >添加用户 </span>
+								<span><input type="radio" name="name3" >修改用户信息 </span>
+							</td>
+						</tr>
+						<tr>
+							<td>保修管理</td>
+							<td>
+								<span><input type="radio" name="name4" >保修列表 </span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="newUser_bottom">
+					<span>使用状态</span>
+					<span><input type="radio" name="name5">正常</span>
+					<span><input type="radio" name="name5">停用</span>
+				</div>
+				<div class="newUser_btm_btn">
+					<button type="button">保存</button>
+					<button type="button">取消</button>
+				</div>
+			</div>
+		</div>
+		<div id="editUser" style="display: none;">
+			<div class="newUser_title">
+				<div class="newUser_top">
+					<div class="name_input">
+						<span>角色名称</span>
+						<input type="text" name="">
+					</div>
+					<div class="des_input">
+						<span>角色描述</span>
+						<input type="text" name="">
+					</div>
+				</div>
+				<div class="newUser_middle">
+					<span>功能权限</span>
+					<table>
+						<tr>
+							<td>抄表管理</td>
+							<td>
+								<span><input type="radio" name="name1">抄表录入 </span>
+								<span><input type="radio" name="name1" >抄表列表 </span>
+								<span><input type="radio" name="name1" >保修提交 </span>
+							</td>
+						</tr>
+						<tr>
+							<td>缴费管理</td>
+							<td>
+								<span><input type="radio" name="name2" >缴费统计 </span>
+								<span><input type="radio" name="name2" >缴费录入 </span>
+								<span><input type="radio" name="name2" >逾期 </span>
+								<span><input type="radio" name="name2" >打印收据 </span>
+								<span><input type="radio" name="name2" >收费明细 </span>
+							</td>
+						</tr>
+						<tr>
+							<td>用户管理</td>
+							<td>
+								<span><input type="radio" name="name3" >用户列表 </span>
+								<span><input type="radio" name="name3" >添加用户 </span>
+								<span><input type="radio" name="name3" >修改用户信息 </span>
+							</td>
+						</tr>
+						<tr>
+							<td>保修管理</td>
+							<td>
+								<span><input type="radio" name="name4" >保修列表 </span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="newUser_bottom">
+					<span>使用状态</span>
+					<span><input type="radio" name="name5">正常</span>
+					<span><input type="radio" name="name5">停用</span>
+				</div>
+				<div class="newUser_btm_btn">
+					<button type="button">保存</button>
+					<button type="button">取消</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <script type="text/javascript">
@@ -105,9 +224,39 @@
 		changeStyle(li);
 		changeDisplay(id);
 	}
+	var fold_state = false;
 	function fold(btn){
-		// var list = document.getElementById("list");
-		// list.style.left = -200 + 'px'; 
+		var list = document.getElementById("list");
+		var show = document.getElementById("show");
+		var foldBtn = document.getElementsByClassName("unfold")[0];
+		if (!fold_state) {
+			$(function(){
+				$("#list").animate({
+					left:"-=180px"
+				},200);
+				$("#show").animate({
+					left:"-=165px"
+				},200);
+				$("#unfold").animate({
+					left:"-=165px"
+				},200);
+				//2000ms,instead of 2s to animate
+			})
+		}else if (fold_state) {
+			$(function(){
+				$("#list").animate({
+					left:"+=180px"
+				},200);
+				$("#show").animate({
+					left:"+=165px"
+				},200);
+				$("#unfold").animate({
+					left:"+=165px"
+				},200);
+				//2000ms,instead of 2s to animate
+			})
+		}
+		fold_state = !fold_state;
 	}
 </script>
 </body>

@@ -40,9 +40,9 @@ li{
 	padding: 5px 20px;
 	font-size: 12px;
 }
-.unfold{
+#unfold{
 	position: absolute;
-    right: 0;
+    left: 165px;
     top: 50%;
     width: 15px;
     height: 35px;
@@ -59,10 +59,16 @@ li{
 	margin-left: 20px;
 }
 /*show*/		
-tr:nth-child(even) td{
+#log_table tr:nth-child(even) td{
 	background: #F5F5F5;
 }
-tr:nth-child(odd) td{
+#log_table tr:nth-child(odd) td{
+	background: #FFF;
+}
+#user_table tr:nth-child(even) td{
+	background: #F5F5F5;
+}
+#user_table tr:nth-child(odd) td{
 	background: #FFF;
 }
 /** log **/
@@ -163,14 +169,99 @@ tr:nth-child(odd) td{
 #user_table td:nth-child(6){
 	width: 20%;
 }
+/* user end */
+/* newUser */
 #newUser{
 	width: 100%;
-	height: 500px;
-	background: red;
+	/*height: 500px;*/
+	/*background: red;*/
 }
+.newUser_top{
+	height: 85px;
+	border-bottom: solid 1px lightgray;
+}
+.newUser_top div input{
+	width: 250px;
+	height: 22px;
+}
+.name_input{
+	float: left;
+	margin-top: 25px;
+}
+.des_input{
+	float: left;
+	margin-top: 20px;
+	margin-left: 65px;
+}
+.newUser_middle{
+	/*height: 350px;*/
+	border-bottom: solid 1px lightgray;
+	padding-bottom: 50px;
+}
+.newUser_middle span{
+	display: block;
+	margin-top: 30px;
+}
+.newUser_middle table{
+	margin-top: 15px;
+	margin-left: 95px;
+}
+.newUser_middle table tr td{	
+	border: solid 1px lightgray;
+	border-collapse: collapse;
+	padding: 20px 35px;
+}
+.newUser_middle table tr td span{
+	display: block;
+	float: left;
+	margin-top: 0;
+}
+.newUser_middle table tr td span input{
+	margin-left: 40px;
+	margin-right: 10px;
+}
+
+.newUser_bottom{
+	height: 72px;
+	border-bottom: solid 1px lightgray;
+	/*padding-top: 30px;
+	padding-bottom: 30px;*/
+}
+.newUser_bottom span{
+	display: block;
+	float: left;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.newUser_bottom span input{
+	margin-right: 10px;
+}
+.newUser_bottom span:nth-child(2){
+	margin-left: 30px;
+}
+.newUser_bottom span:nth-child(3){
+	margin-left: 50px;
+}
+.newUser_btm_btn{
+	float: right;
+}
+.newUser_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;
+	font-size: 20px;
+}
+.newUser_btm_btn button:nth-child(1){
+	background-color: #EFA600;
+}
+.newUser_btm_btn button:nth-child(2){
+	background-color: #00ABEF;
+}
+/* newUser end */
 #editUser{
 	width: 100%;
-	height: 500px;
-	background: green;
 }
 /*show end*/
