@@ -18,6 +18,7 @@
 }
 #show{
 	margin-top: 20px;
+	padding-right: 20px;
 	left: 200px;
 	right: 0px;
 }
@@ -136,15 +137,19 @@ li{
 /** meterList **/
 #meterList{
 	width: 100%;
-	background-color: #33ee22;
+	/*background-color: #33ee22;*/
 }
 .meterList_top{
 	height: 85px;
 }
 .meterList_top div{
 	float: left;
-	margin-right: 30px;
+	margin-right: 2%;
 	margin-top: 20px;
+}
+.meterList_top div:nth-child(5){
+	float: right;
+	margin-right: 0;
 }
 .meterList_top div input{
 	width: 100px;
@@ -156,26 +161,227 @@ li{
 .meterList_top div:nth-child(2) input{
 	width: 117px;
 }
-
-
+.meterList_top div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.meterList_main{
+	width: 100%;
+	overflow: hidden;
+}
+.meterList_title{
+	width: 100%;
+	overflow: hidden;
+}
+.meterList_subTitle{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background-color: #ECECEC;
+}
+.meterList_subTitle:nth-child(1){
+	width: 15%;
+}
+.meterList_subTitle:nth-child(2){
+	width: 15%;
+}
+.meterList_subTitle:nth-child(3){
+	width: 25%;
+}
+.meterList_subTitle:nth-child(4){
+	width: 20%;
+}
+.meterList_subTitle:nth-child(5){
+	width: 15%;
+}
+.meterList_subTitle:nth-child(6){
+	width: 10%;
+}
+#meterList_table{
+	width: 100%;
+}
+#meterList_table tr:nth-child(odd) td{
+	background-color: #FFF;
+}
+#meterList_table tr:nth-child(even) td{
+	background-color: #FAFAFA;
+}
+#meterList_table tr{
+	display: block;
+}
+#meterList_table td{
+	font-size: 14px;
+	color: #373737;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+#meterList_table td:nth-child(1){
+	width: 15%;
+}
+#meterList_table td:nth-child(2){
+	width: 15%;
+}
+#meterList_table td:nth-child(3){
+	width: 25%;
+}
+#meterList_table td:nth-child(4){
+	width: 20%;
+}
+#meterList_table td:nth-child(5){
+	width: 15%;
+}
+#meterList_table td:nth-child(6){
+	width: 10%;
+}
+#meterList_table .small_button{
+	width: 70px;
+	height: 30px;
+}
 
 
 /** detail **/
 #detail{
 	width: 100%;
-	background-color: #55ee22;
+	/*background-color: #55ee22;*/
+}
+.detail_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+}
+.detail_content div{
+	display: block;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.detail_content div input{
+	width: 250px;
+	height: 22px;
+	margin-left: 10px;
+}
+.detail_content .time_input{
+	margin-left: 62px;
+}
+.detail_content .time_input input{
+	width: 118px;
+}
+.detail_content .detail_bottom div{
+	margin-top: 0;
+	margin-bottom: 30px;
+	float: left;
+}
+.detail_content .detail_bottom input{
+	text-align: center;
+	width: 60px;
 }
 
 /** repair **/
 #repair{
 	width: 100%;
-	background-color: #002222;
+	/*background-color: #002222;*/
 }
+.repair_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.repair_content_left{
+	float: left;
+	width: 8%;
+}
+.repair_content_left span{
+	display: block;
+	margin-top: 30px;
+	text-align: right;
+}
+.repair_content_right{
+	float: left;
+}
+.repair_content_right input{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
+	width: 345px;
+	height: 22px;
+}
+.repair_content_right input:nth-child(3){
+	width: 852px;
+}
+.repair_content_right input:nth-child(4){
+	width: 852px;
+	height: 171px;
+}
+.repair_btm_btn{
+	float: right;
+}
+.repair_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
 
 /** report **/
 #report{
 	width: 100%;
-	background-color: #00e822;
+	/*background-color: #00e822;*/
+}
+
+.report_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.report_content_left{
+	float: left;
+	width: 8%;
+}
+.report_content_left span{
+	display: block;
+	margin-top: 30px;
+	text-align: right;
+}
+.report_content_left span:nth-child(3){
+	margin-top: 176px;
+}
+.report_content_right{
+	float: left;
+}
+.report_content_right input{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
+	width: 345px;
+	height: 22px;
+}
+.report_content_right input:nth-child(2){
+	width: 852px;
+	height: 171px;
+}
+.report_btm_btn{
+	float: right;
+}
+.report_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
 }
 
 

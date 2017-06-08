@@ -50,24 +50,24 @@
 		<div id="meterList" style="display: none;">
 			<div class="meterList_top">
 				<div class="name_input">
-					<span>用户名</span>
+					<span>用户名:</span>
 					<input type="text" name="">
 				</div>
 				<div class="name_input">
-					<span>编号</span>
+					<span>编号:</span>
 					<input type="text" name="">
 				</div>
 				<div class="name_input">
-					<span>更新时间段</span>
+					<span>更新时间段:</span>
 					<input type="text" name="">
 					<span>-</span>
 					<input type="text" name="">
 				</div>
 				<div class="name_input">
-					<span>抄表人</span>
+					<span>抄表人:</span>
 					<input type="text" name="">
 				</div>
-				<button type="button">搜索</button>
+				<div><button type="button">搜索</button></div>				
 			</div>
 			<div class="meterList_main">
 				<div class="meterList_title">
@@ -82,13 +82,66 @@
 			</div>
 		</div>
 		<div id="detail" style="display: none;">
-			
+			<div class="detail_content">
+				<div class="num_input">
+					<span>用户编号</span>
+					<input type="text" name="">
+				</div>
+				<div class="name_input">
+					<span>用户名称</span>
+					<input type="text" name="">
+				</div>
+				<div class="time_input">
+					<span>时间</span>
+					<input type="month" name="">
+				</div>
+				<div class="detail_bottom">
+					<div class="table_1st">
+						<span>表一:</span>
+						<input type="text" name="" value="66">
+					</div>
+					<div class="table_2nd">
+						<span>表二:</span>
+						<input type="text" name="">
+					</div>
+					<div class="table_3rd">
+						<span>表三:</span>
+						<input type="text" name="">
+					</div>
+				</div>
+			</div>
 		</div>
 		<div id="repair" style="display: none;">
-			
+			<div class="repair_content">
+				<div class="repair_content_left">
+					<span>用户编号</span>
+					<span>当前度数</span>
+					<span>简述</span>
+					<span>备注信息</span>
+				</div>
+				<div class="repair_content_right">
+					<input type="text" name="">
+					<input type="text" name="">
+					<input type="text" name="">
+					<input type="text" name="">
+				</div>
+			</div>
+			<div class="repair_btm_btn"><button type="button">提交</button></div>
 		</div>
 		<div id="report" style="display: none;">
-			
+			<div class="report_content">
+				<div class="report_content_left">
+					<span>用户编号</span>
+					<span>描述</span>
+					<span>图片取证</span>
+				</div>
+				<div class="report_content_right">
+					<input type="text" name="">
+					<input type="text" name="">
+					<input type="file" name="">
+				</div>
+			</div>
+			<div class="report_btm_btn"><button type="button">提交</button></div>
 		</div>
 	</div>
 </div>
@@ -112,6 +165,26 @@
 		table.innerHTML = tableInnerHTML;
 	}
 	forTable_meterInput();
+	//to the meterList table
+	function forTable_meterList(){
+		var table = document.getElementById("meterList_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["zhaosi","Q10010","表一：25 表二：65","2017-06-07","wangwu","<button class=\"small_button\">查看详情</button>"];
+		for (var i = 0; i < 8; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 6; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_meterList();
+	//to the datetime-local
 
 </script>
 <script type="text/javascript" src="../js/bottom_sidebar.js"></script>
