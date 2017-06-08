@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding:0;
+}
+#content{
+	position: relative;
+	height: 600px;
+	margin: 0 auto;
+}
+#list,#show{
+	position: absolute;
+	height: 100%;
+}
+#list{
+	left: 0;
+	width: 180px;
+	background: #005B90;
+}
+#show{
+	margin-top: 20px;
+	left: 200px;
+	right: 0px;
+}
+
+/*list*/
+#list ul {
+	/*width: 80%;*/
+	display: block;
+	color:#FFF;
+}
+li{	
+	list-style: none;
+	cursor: default;
+}
+.listMenu{
+	font-size: 14px;
+	padding: 8px 20px;
+}
+.subListMenu{
+	padding: 5px 20px;
+	font-size: 12px;
+}
+#unfold{
+	position: absolute; 
+    left: 165px;
+    top: 50%;
+    width: 15px; 
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #FFF;
+    background: #3299EA;
+    cursor: pointer;
+} 
+
+/** meterInput **/
+#meterInput{
+	width: 100%;
+	/*background-color: #00ee22;*/
+}
+.meterInput_top{
+	height: 85px;
+	border-bottom: solid 1px lightgray;
+}
+.meterInput_top div input{
+	width: 250px;
+	height: 22px;
+}
+.meterInput_top .num_input{
+	float: left;
+	margin-top: 20px;
+}
+.meterInput_middle{
+	border-bottom: solid 1px lightgray;
+	padding-bottom: 50px;
+}
+.meterInput_middle span{
+	display: block;
+	margin-top: 30px;
+}
+.meterInput_middle table{
+	width: 860px;
+	margin-top: 15px;
+	margin-left: 95px;
+	text-align: center;
+}
+.meterInput_middle table tr td:nth-child(1){
+	width: 15%;
+}
+.meterInput_middle table tr td:nth-child(2){
+	width: 35%;
+}
+.meterInput_middle table tr td:nth-child(3){
+	width: 25%;
+}
+.meterInput_middle table tr td:nth-child(4){
+	width: 25%;
+}
+.meterInput_middle table tr td{
+	border: solid 1px lightgray;
+	border-collapse: collapse;
+	padding: 20px 35px;
+}
+
+.meterInput_bottom{
+	height: 72px;
+	border-bottom: solid 1px lightgray;
+}
+.meterInput_bottom span{
+	display: block;
+	float: left;
+	margin-right: 50px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.meterInput_bottom span input{
+	width: 60px;
+	height: 22px;
+	margin-left: 10px;
+}
+.meterInput_btm_btn{
+	float: right;
+}
+.meterInput_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;
+	font-size: 20px;
+	background-color: #00ABEF;
+}
+
+
+/** meterList **/
+#meterList{
+	width: 100%;
+	background-color: #33ee22;
+}
+.meterList_top{
+	height: 85px;
+}
+.meterList_top div{
+	float: left;
+	margin-right: 30px;
+	margin-top: 20px;
+}
+.meterList_top div input{
+	width: 100px;
+	height: 22px;
+}
+.meterList_top div:nth-child(1) input{
+	width: 117px;
+}
+.meterList_top div:nth-child(2) input{
+	width: 117px;
+}
+
+
+
+
+/** detail **/
+#detail{
+	width: 100%;
+	background-color: #55ee22;
+}
+
+/** repair **/
+#repair{
+	width: 100%;
+	background-color: #002222;
+}
+
+/** report **/
+#report{
+	width: 100%;
+	background-color: #00e822;
+}
+
+
+
+
+
+

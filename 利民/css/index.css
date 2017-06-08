@@ -65,5 +65,5 @@
 /** page_html **/
 #page_iframe{
 	width: 100%;
-	height: 650px;
+	/*min-height: 650px;*/
 }

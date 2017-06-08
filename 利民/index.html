@@ -1,28 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 	<title>SaaS后台管理系统</title>
 	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<script type="text/javascript">
-		function switchMenu(parm){
-			var pag_top_if = document.getElementById("page_iframe");
-			if (parm.id  == "page_top_help") {
-				pag_top_if.src = "./small_page/useHelp.html";
-			}else if (parm.id  == "page_top_sysMend") {
-				pag_top_if.src = "./small_page/sysMaintenance.html";
-			}else if (parm.id  == "page_top_tabM") {
-				pag_top_if.src = "./small_page/useHelp.html";
-			}else if (parm.id  == "page_top_payM") {
-				pag_top_if.src = "./small_page/sysMaintenance.html";
-			}else if (parm.id  == "page_top_userM") {
-				pag_top_if.src = "./small_page/useHelp.html";
-			}else if (parm.id  == "page_top_mendS") {
-				pag_top_if.src = "./small_page/sysMaintenance.html";
-			}
-		}
-	</script>
+	<script type="text/javascript" src="./js/height_adjust_f.js"></script>
 </head>
 <body>
 	<div class="page_content">
@@ -48,7 +31,7 @@
 		</div>
 		<div class="page_navigation">
 			<ul>
-				<li id="page_top_help" onclick="switchMenu(this)">使用帮助</li>
+				<li id="page_top_help" style="background: #005B90;color: #FFF;" onclick="switchMenu(this)">使用帮助</li>
 				<li id="page_top_sysMend" onclick="switchMenu(this)">系统维护</li>
 				<li id="page_top_tabM" onclick="switchMenu(this)">抄表管理</li>
 				<li id="page_top_payM" onclick="switchMenu(this)">缴费管理</li>
@@ -57,8 +40,47 @@
 			</ul>
 		</div>
 		<div class="page_html">
-			<iframe src="./small_page/useHelp.html" id="page_iframe" frameborder="0"></iframe>
+			<iframe src="./small_page/useHelp.html" id="page_iframe" scrolling="no" frameborder="0"></iframe>
 		</div>
 	</div>
+	<script type="text/javascript">
+		var current_pag = document.getElementById("page_top_help");
+		function switchMenu(parm){
+			var pag_top_if = document.getElementById("page_iframe");
+			if (parm.id  == "page_top_help") {
+				pag_top_if.src = "./small_page/useHelp.html";
+			}else if (parm.id  == "page_top_sysMend") {
+				pag_top_if.src = "./small_page/sysMaintenance.html";
+			}else if (parm.id  == "page_top_tabM") {
+				pag_top_if.src = "./small_page/meterReadManage.html";
+			}else if (parm.id  == "page_top_payM") {
+				pag_top_if.src = "./small_page/sysMaintenance.html";
+			}else if (parm.id  == "page_top_userM") {
+				pag_top_if.src = "./small_page/useHelp.html";
+			}else if (parm.id  == "page_top_mendS") {
+				pag_top_if.src = "./small_page/sysMaintenance.html";
+			}
+			changeStyle(parm);
+		}
+		function changeStyle(li_a){
+			if (li_a!=current_pag) {
+				current_pag.style.background = "#00B8ED";
+				current_pag.style.color = "#FFF";
+				current_pag = li_a;
+				current_pag.style.background = "#005B90";
+				current_pag.style.color = "#FFF";
+			}
+		}
+		function setIframeHeight(iframe){
+			iframe.height = document.documentElement.clientHeight;
+			startInit('page_iframe',574);
+		}
+		window.onload = function(){
+			setIframeHeight(document.getElementById("page_iframe"));
+		}
+		window.onresize = function(){
+			setIframeHeight(document.getElementById("page_iframe"));
+		}
+	</script>
 </body>
 </html>

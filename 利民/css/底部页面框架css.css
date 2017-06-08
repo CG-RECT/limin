@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding:0;
+}
+#content{
+	position: relative;
+	height: 600px;
+	margin: 0 auto;
+}
+#list,#show{
+	position: absolute;
+	height: 100%;
+}
+#list{
+	left: 0;
+	width: 180px;
+	background: #005B90;
+}
+#show{
+	margin-top: 20px;
+	left: 200px;
+	right: 0px;
+}
+
+/*list*/
+#list ul {
+	/*width: 80%;*/
+	display: block;
+	color:#FFF;
+}
+li{	
+	list-style: none;
+	cursor: default;
+}
+.listMenu{
+	font-size: 14px;
+	padding: 8px 20px;
+}
+.subListMenu{
+	padding: 5px 20px;
+	font-size: 12px;
+}
+#unfold{
+	position: absolute; 
+    left: 165px;
+    top: 50%;
+    width: 15px; 
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #FFF;
+    background: #3299EA;
+    cursor: pointer;
+} 

@@ -14,7 +14,7 @@
 #list{
 	left: 0;
 	width: 180px;
-	background: #18476B;
+	background: #005B90;
 }
 #show{
 	margin-top: 20px;
@@ -184,11 +184,11 @@ li{
 	width: 250px;
 	height: 22px;
 }
-.name_input{
+.newUser_top .name_input{
 	float: left;
-	margin-top: 25px;
+	margin-top: 20px;
 }
-.des_input{
+.newUser_top .des_input{
 	float: left;
 	margin-top: 20px;
 	margin-left: 65px;

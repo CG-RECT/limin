@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/meterReadManage.css">
+	<script type="text/javascript" src="../js/vendor/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="list">
+		<ul>
+			<li class="listMenu" style="background: #FFF;color: #005B90;" onclick="change(this,'meterInput')">抄表录入</li>
+			<li class="listMenu" onclick="change(this,'meterList')">抄表列表</li>
+			<li class="listMenu" onclick="change(this,'detail')">详情</li>
+			<li class="listMenu" onclick="change(this,'repair')">保修提交</li>
+			<li class="listMenu" onclick="change(this,'report')">举报提交</li>
+		</ul>
+	</div>
+	<div id="unfold" onclick="fold(this)"></div>
+	<div id="show">
+		<div id="meterInput">
+			<div class="meterInput_top">
+				<div class="num_input">						
+					<span>用户编号</span>
+					<input type="text" name="">
+				</div>
+			</div>
+			<div class="meterInput_middle">
+				<span>历史记录</span>
+				<table id="meterInput_table">
+					<tr>
+						<td>用户</td>
+						<td>时间</td>
+						<td>水量</td>
+						<td>抄表人</td>
+					</tr>
+				</table>
+			</div>
+			<div class="meterInput_bottom">
+				<span>表一:<input type="text" name=""></span>
+				<span>表二:<input type="text" name=""></span>
+				<span>表三:<input type="text" name=""></span>
+			</div>
+			<div class="meterInput_btm_btn">
+				<button type="button">保存</button>
+			</div>
+		</div>
+		<div id="meterList" style="display: none;">
+			<div class="meterList_top">
+				<div class="name_input">
+					<span>用户名</span>
+					<input type="text" name="">
+				</div>
+				<div class="name_input">
+					<span>编号</span>
+					<input type="text" name="">
+				</div>
+				<div class="name_input">
+					<span>更新时间段</span>
+					<input type="text" name="">
+					<span>-</span>
+					<input type="text" name="">
+				</div>
+				<div class="name_input">
+					<span>抄表人</span>
+					<input type="text" name="">
+				</div>
+				<button type="button">搜索</button>
+			</div>
+			<div class="meterList_main">
+				<div class="meterList_title">
+					<div class="meterList_subTitle">用户</div>
+					<div class="meterList_subTitle">编号</div>
+					<div class="meterList_subTitle">最后记录度数</div>
+					<div class="meterList_subTitle">最后更新时间</div>
+					<div class="meterList_subTitle">抄表人</div>
+					<div class="meterList_subTitle">操作</div>
+				</div>
+				<table id="meterList_table"></table>
+			</div>
+		</div>
+		<div id="detail" style="display: none;">
+			
+		</div>
+		<div id="repair" style="display: none;">
+			
+		</div>
+		<div id="report" style="display: none;">
+			
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//to the meterInput table
+	function forTable_meterInput(){
+		var table = document.getElementById("meterInput_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["zhangsan","2017-06-07 16:45:01","100L","wangwu"];
+		for (var i = 0; i < 4; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 4; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_meterInput();
+
+</script>
+<script type="text/javascript" src="../js/bottom_sidebar.js"></script>
+</body>
+</html>
