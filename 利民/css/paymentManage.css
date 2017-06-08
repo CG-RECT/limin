@@ -1,0 +1,496 @@
+*{
+	margin: 0;
+	padding:0;
+}
+#content{
+	position: relative;
+	height: 600px;
+	margin: 0 auto;
+}
+#list,#show{
+	position: absolute;
+	height: 100%;
+}
+#list{
+	left: 0;
+	width: 180px;
+	background: #005B90;
+}
+#show{
+	margin-top: 20px;
+	padding-right: 20px;
+	left: 200px;
+	right: 0px;
+}
+
+/*list*/
+#list ul {
+	/*width: 80%;*/
+	display: block;
+	color:#FFF;
+}
+li{	
+	list-style: none;
+	cursor: default;
+}
+.listMenu{
+	font-size: 14px;
+	padding: 8px 20px;
+}
+.subListMenu{
+	padding: 5px 20px;
+	font-size: 12px;
+}
+#unfold{
+	position: absolute; 
+    left: 165px;
+    top: 50%;
+    width: 15px; 
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #FFF;
+    background: #3299EA;
+    cursor: pointer;
+} 
+
+/** paymentInput **/
+#paymentInput{
+	width: 100%;
+}
+.paymentInput_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.paymentInput_content div{
+	display: block;
+	float: left;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.paymentInput_content div select{
+	width: 345px;
+	padding: 0 2%;
+	height: 26px;
+	margin-left: 10px;
+}
+.paymentInput_content div select option{
+	text-align: center;
+}
+.paymentInput_content div input{
+	width: 345px;
+	height: 22px;
+	margin-left: 10px;
+}
+.paymentInput_content .pay_source{
+	margin-left: 80px;
+}
+.paymentInput_content .money_input{
+	margin-left: 63px;
+}
+.paymentInput_content .time_input{
+	margin-left: 111px;
+}
+.paymentInput_content .water_month span{
+	width: 52px;
+    display: block;
+    float: left;
+    margin-left: 17px;
+}
+.paymentInput_content .money_last{
+	clear: both;
+	margin-left: 47px;
+}.paymentInput_content .money_last span:nth-child(2){
+	font-family: PingFangSC-Regular;
+	font-size: 24px;
+	color: #00ABEF;
+	letter-spacing: 0;
+	line-height: 22px;
+}
+.paymentInput_content .money_arrears{
+	clear: both;
+	margin-left: 47px;
+}
+.paymentInput_content .money_arrears span:nth-child(2){
+	font-family: PingFangSC-Regular;
+	font-size: 24px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 22px;
+}
+.paymentInput_btm_btn{
+	float: right;
+}
+.paymentInput_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+
+/** paymentStatis **/
+#paymentStatis{
+	width: 100%;
+}
+.paymentStatis_top{
+	height: 85px;
+}
+.paymentStatis_top div{
+	float: left;
+	margin-right: 2%;
+	margin-top: 20px;
+}
+.paymentStatis_top div input{
+	width: 100px;
+	height: 22px;
+}
+.paymentStatis_top div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.paymentStatis_main{
+	width: 100%;
+	overflow: hidden;
+}
+.paymentStatis_title{
+	width: 100%;
+	overflow: hidden;
+}
+.paymentStatis_subTitle{
+	width: 25%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background-color: #ECECEC;
+}
+#paymentStatis_table{
+	width: 100%;
+}
+#paymentStatis_table tr:nth-child(odd) td{
+	background-color: #FFF;
+}
+#paymentStatis_table tr:nth-child(even) td{
+	background-color: #FAFAFA;
+}
+#paymentStatis_table tr{
+	display: block;
+}
+#paymentStatis_table td{
+	font-size: 14px;
+	color: #373737;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 25%;
+}
+
+
+
+/** payDelay **/
+#payDelay{
+	width: 100%;
+}
+.payDelay_top{
+	height: 85px;
+}
+.payDelay_top div{
+	float: left;
+	margin-right: 2%;
+	margin-top: 20px;
+}
+.payDelay_top div input{
+	width: 100px;
+	height: 22px;
+}
+.payDelay_top div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.payDelay_main{
+	width: 100%;
+	overflow: hidden;
+}
+.payDelay_title{
+	width: 100%;
+	overflow: hidden;
+}
+.payDelay_subTitle{
+	width: 12.5%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background-color: #ECECEC;
+}
+#payDelay_table{
+	width: 100%;
+}
+#payDelay_table tr:nth-child(odd) td{
+	background-color: #FFF;
+}
+#payDelay_table tr:nth-child(even) td{
+	background-color: #FAFAFA;
+}
+#payDelay_table tr{
+	display: block;
+}
+#payDelay_table td{
+	font-size: 14px;
+	color: #373737;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 12.5%;
+}
+
+
+/** treatmentResult **/
+#treatmentResult{
+	width: 100%;
+}
+.treatmentResult_content{
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 60px;
+	border: solid 1px lightgray;
+}
+.treatmentResult_content div{
+	display: block;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.treatmentResult_content div span:nth-child(2){
+	margin-left: 20px;
+}
+.treatmentResult_content .result_input span{
+	vertical-align: top;
+}
+.treatmentResult_content .result_input input{
+	margin-left: 10px;
+	width: 852px;
+	height: 171px;
+}
+.treatmentResult_btm_btn{
+	float: right;
+}
+.treatmentResult_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+/** printData **/
+#printData{
+	width: 100%;
+}
+.printData_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.printData_content_left{
+	float: left;
+	width: 10%;
+}
+.printData_content_left span{
+	display: block;
+	margin-top: 30px;
+	text-align: right;
+}
+.printData_content_left span:nth-child(3){
+	margin-top: 160px;
+}
+.printData_content_right{
+	margin-left: 10px;
+	float: left;
+	width: 88%;
+}
+.printData_content_right input{
+	display: block;
+	margin-top: 27px;
+	width: 345px;
+	height: 22px;
+	text-align: center;
+}
+.printData_content_right .water_used{
+	margin-top: 30px;
+	overflow: hidden;
+	width: 77%;
+	border: solid 1px lightgray;
+	padding-bottom: 30px;
+}
+.water_used div{
+	display: block;
+	margin-top: 30px;
+	margin-left: 20px;
+}
+.water_used div:nth-child(2){
+	margin-top: 
+}
+.water_used .num_input span{
+	display: block;
+	float: left;
+}
+.water_used .num_input input{
+	float: left;
+	margin-top: 0;
+	margin-left: 10px;
+	text-align: left;
+	width: 234px;
+	height: 22px;
+}
+.water_used div button{
+	width: 85px;
+    height: 26px;
+    background-color: #98CD00;
+    color: white;
+    border: none;
+    margin-left: 36px;
+}
+.water_used .water_number div{
+	margin-left: 20px;
+	margin-top: 0;
+	margin-right: 40px;
+	float: left;
+}
+.water_used .water_number div span:nth-child(2){
+	font-family: .PingFang-SC-Regular;
+	font-size: 24px;
+	color: #00ABEF;
+	letter-spacing: 0;
+	margin-left: 10px;
+}
+.water_used .water_number .arrears span:nth-child(2){
+	font-family: .PingFang-SC-Regular;
+	font-size: 24px;
+	color: #EFA600;
+	letter-spacing: 0;
+}
+.printData_content_right .style_select{
+	margin-top: 27px;
+	overflow: hidden;
+}
+.printData_content_right .style_select select{
+	width: 159px;
+	height: 30px;
+	display: block;
+	float: left;
+}
+.printData_content_right .style_select div{
+	float: left;
+}
+.printData_content_right .style_select div button{
+	width: 138px;
+	height: 30px;
+	background-color: #EFA600;
+	color: white;
+	margin-left: 20px;
+	border: none;
+}
+.printData_content_right .style_img{
+	clear: both;
+	margin-top: 20px;
+}
+
+.printData_btm_btn{
+	float: right;
+}
+.printData_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+
+/** chargeDetails **/
+#chargeDetails{
+	width: 100%;
+}
+.chargeDetails_top{
+	height: 132px;
+}
+.chargeDetails_top div{
+	float: left;
+	margin-right: 4%;
+	margin-top: 20px;
+}
+.chargeDetails_top div input{
+	width: 100px;
+	height: 22px;
+}
+.chargeDetails_top div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.chargeDetails_main{
+	width: 100%;
+	overflow: hidden;
+}
+.chargeDetails_title{
+	width: 100%;
+	overflow: hidden;
+}
+.chargeDetails_subTitle{
+	width: 12.5%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background-color: #ECECEC;
+}
+#chargeDetails_table{
+	width: 100%;
+}
+#chargeDetails_table tr:nth-child(odd) td{
+	background-color: #FFF;
+}
+#chargeDetails_table tr:nth-child(even) td{
+	background-color: #FAFAFA;
+}
+#chargeDetails_table tr{
+	display: block;
+}
+#chargeDetails_table td{
+	font-size: 14px;
+	color: #373737;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 12.5%;
+}
+
+
+
+
+

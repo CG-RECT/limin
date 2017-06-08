@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/paymentManage.css">
+	<script type="text/javascript" src="../js/vendor/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="list">
+		<ul>
+			<li class="listMenu" style="background: #FFF;color: #005B90;" onclick="change(this,'paymentInput')">缴费录入</li>
+			<li class="listMenu" onclick="change(this,'paymentStatis')">缴费统计</li>
+			<li class="listMenu" onclick="change(this,'payDelay')">逾期</li>
+			<li class="listMenu" onclick="change(this,'treatmentResult')">处理结果</li>
+			<li class="listMenu" onclick="change(this,'printData')">打印数据</li>
+			<li class="listMenu" onclick="change(this,'chargeDetails')">收费明细</li>
+		</ul>
+	</div>
+	<div id="unfold" onclick="fold(this)"></div>
+	<div id="show">
+		<div id="paymentInput">
+			<div class="paymentInput_content">
+				<div class="num_input">
+					<span>用户编号</span>
+					<input type="text" name="">
+				</div>
+				<div class="pay_source">
+					<span>缴费来源</span>
+					<select>
+						<option>电汇</option>
+						<option>微信</option>
+						<option>支付宝</option>
+						<option>营业厅</option>
+					</select>
+				</div>
+				<div class="money_input">
+					<span>金额</span>
+					<input type="text" name="">
+				</div>
+				<div class="time_input">
+					<span>时间</span>
+					<input type="text" name="">
+				</div>
+				<div class="water_month">
+					<span>用水量(本月)</span>
+					<input type="text" name="">
+				</div>
+				<div class="money_last">
+					<span>上月余额&nbsp;(元):&nbsp;</span>
+					<span>66.66</span>
+				</div>
+				<div class="money_arrears">
+					<span>往月欠费&nbsp;(元):&nbsp;</span>
+					<span>0.00</span>
+				</div>
+			</div>
+			<div class="paymentInput_btm_btn"><button type="button">提交</button></div>
+		</div>
+		<div id="paymentStatis" style="display: none;">
+			<div class="paymentStatis_top">
+				<div class="time_input">
+					<span>更新时间段:</span>
+					<input type="text" name="">
+					<span>-</span>
+					<input type="text" name="">
+				</div>
+				<div class="type_input">
+					<span>支付类型:</span>
+					<input type="text" name="">
+				</div>
+				<div><button type="button">搜索</button></div>
+			</div>
+			<div class="paymentStatis_main">
+				<div class="paymentStatis_title">
+					<div class="paymentStatis_subTitle">时间</div>
+					<div class="paymentStatis_subTitle">支付宝缴费(元)</div>
+					<div class="paymentStatis_subTitle">微信缴费(元)</div>
+					<div class="paymentStatis_subTitle">其他收费(元)</div>
+				</div>
+				<table id="paymentStatis_table"></table>
+			</div>
+		</div>
+		<div id="payDelay" style="display: none;">
+			<div class="payDelay_top">
+				<div class="time_input">
+					<span>近期缴费时间段:</span>
+					<input type="text" name="">
+					<span>-</span>
+					<input type="text" name="">
+				</div>
+				<div class="name_input">
+					<span>用户名:</span>
+					<input type="text" name="">
+				</div>
+				<div class="num_input">
+					<span>编号:</span>
+					<input type="text" name="">
+				</div>
+				<div><button type="button">搜索</button></div>
+			</div>
+			<div class="payDelay_main">
+				<div class="payDelay_title">
+					<div class="payDelay_subTitle">用户编号</div>
+					<div class="payDelay_subTitle">用户名称</div>
+					<div class="payDelay_subTitle">累计未缴费水量(吨)</div>
+					<div class="payDelay_subTitle">水费(元)</div>
+					<div class="payDelay_subTitle">排污费</div>
+					<div class="payDelay_subTitle">累计未缴</div>
+					<div class="payDelay_subTitle">最近缴费时间</div>
+					<div class="payDelay_subTitle">处理</div>
+				</div>
+				<table id="payDelay_table"></table>
+			</div>
+		</div>
+		<div id="treatmentResult" style="display: none;">
+			<div class="treatmentResult_content">
+				<div class="num_input">
+					<span>用户编号</span>
+					<span>S00001</span>
+				</div>
+				<div class="name_input">
+					<span>用户名称</span>
+					<span>zhangsan</span>
+				</div>
+				<div class="result_input">
+					<span>处理结果</span>
+					<input type="text" name="">
+				</div>
+			</div>
+			<div class="treatmentResult_btm_btn"><button type="button">提交</button></div>
+		</div>
+		<div id="printData" style="display: none;">
+			<div class="printData_content">
+				<div class="printData_content_left">
+					<span>年份</span>
+					<span>用户用水情况</span>
+					<span>选择发票样式</span>
+				</div>
+				<div class="printData_content_right">
+					<input type="Month" name="">
+					<div class="water_used">
+						<div class="num_input">
+							<span>用户编号</span>
+							<input type="text" name="">
+						</div>
+						<div><button type="button">查询</button></div>
+						<div class="water_number">
+							<div class="num_last">
+								<span>上月表数</span>
+								<span>22</span>
+							</div>
+							<div class="num_this">
+								<span>本月表数</span>
+								<span>22</span>
+							</div>
+							<div class="arrears">
+								<span>历史欠费</span>
+								<span>22</span>
+							</div>
+						</div>
+					</div>
+					<div class="style_select">
+					<select>
+						<option>样式一</option>
+					</select>
+					<div><button type="button">打印预览</button></div>
+					</div>
+					<div class="style_img">
+						<img src="../image/invoice.png">
+					</div>
+				</div>
+			</div>
+			<div class="printData_btm_btn"><button type="button">提交</button></div>
+		</div>
+		<div id="chargeDetails" style="display: none;">
+			<div class="chargeDetails_top">
+				<div class="name_input">
+					<span>用户名:</span>
+					<input type="text" name="">
+				</div>
+				<div class="num_input">
+					<span>编号:</span>
+					<input type="text" name="">
+				</div>
+				<div class="source_input">
+					<span>收费来源:</span>
+					<input type="text" name="">
+				</div>
+				<div class="time_input">
+					<span>近期缴费时间段:</span>
+					<input type="text" name="">
+					<span>-</span>
+					<input type="text" name="">
+				</div>
+				<div class="source_input">
+					<span>处理人:</span>
+					<input type="text" name="">
+				</div>
+				<div><button type="button">搜索</button></div>
+			</div>
+			<div class="chargeDetails_main">
+				<div class="chargeDetails_title">
+					<div class="chargeDetails_subTitle">用户编号</div>
+					<div class="chargeDetails_subTitle">用户名称</div>
+					<div class="chargeDetails_subTitle">收费来源</div>
+					<div class="chargeDetails_subTitle">水费(元)</div>
+					<div class="chargeDetails_subTitle">排污费</div>
+					<div class="chargeDetails_subTitle">收费合计</div>
+					<div class="chargeDetails_subTitle">处理人</div>
+					<div class="chargeDetails_subTitle">收费时间</div>
+				</div>
+				<table id="chargeDetails_table"></table>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//to the paymentStatis table
+	function forTable_paymentStatis(){
+		var table = document.getElementById("paymentStatis_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["2017-05-07","400000.00","300000.00","200000.00"];
+		for (var i = 0; i < 8; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 4; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_paymentStatis();
+	//to the payDelay table
+	function forTable_payDelay(){
+		var table = document.getElementById("payDelay_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["S00001","zhangsan","30","200","28","228","2017-03-03","请填写处理结果"];
+		for (var i = 0; i < 8; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 8; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_payDelay();
+	//to the chargeDetails table
+	function forTable_chargeDetails(){
+		var table = document.getElementById("chargeDetails_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["S00001","zhangsan","支付宝","200","28","228","Jack","2017-03-03"];
+		for (var i = 0; i < 8; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 8; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_chargeDetails();
+</script>
+<script type="text/javascript" src="../js/bottom_sidebar.js"></script>
+</body>
+</html>
