@@ -41,7 +41,7 @@ li{
 	font-size: 12px;
 }
 #unfold{
-	position: absolute;
+	position: absolute; 
     left: 165px;
     top: 50%;
     width: 15px;
