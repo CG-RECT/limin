@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/mendManage.css">
+	<script type="text/javascript" src="../js/vendor/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="list">
+		<ul>
+			<li class="listMenu" style="background: #FFF;color: #005B90;" onclick="change(this,'mendList')">报修列表</li>
+			<li class="listMenu" onclick="change(this,'mendCheck')">查看</li>
+			<li class="listMenu" onclick="change(this,'mendDeal')">处理</li>
+			<li class="listMenu" onclick="change(this,'reportList')">举报列表</li>
+			<li class="listMenu" onclick="change(this,'reportCheck')">查看</li>
+		</ul>
+	</div>
+	<div id="unfold" onclick="fold(this)"></div>
+	<div id="show">
+		<div id="mendList">
+			<div class="mendList_top">
+				<div class="time_input">
+					<span>提交时间:</span>
+					<input type="text" name="">
+					<span>-</span>
+					<input type="text" name="">
+				</div>
+				<div class="type_input">
+					<span>用户编号:</span>
+					<input type="text" name="">
+				</div>
+				<div class="type_input">
+					<span>状态:</span>
+					<input type="text" name="">
+				</div>
+				<div class="type_input">
+					<span>报修人:</span>
+					<input type="text" name="">
+				</div>
+				<div><button type="button">搜索</button></div>
+			</div>
+			<div class="mendList_main">
+				<div class="mendList_title">
+					<div class="mendList_subTitle">用户编号</div>
+					<div class="mendList_subTitle">描述</div>
+					<div class="mendList_subTitle">提交时间</div>
+					<div class="mendList_subTitle">处理状态</div>
+					<div class="mendList_subTitle">处理时间</div>
+					<div class="mendList_subTitle">报修人</div>
+					<div class="mendList_subTitle">处理人</div>
+					<div class="mendList_subTitle">操作</div>
+				</div>
+				<table id="mendList_table"></table>
+			</div>
+		</div>
+		<div id="mendCheck" style="display: none;">
+			<div class="mendCheck_content">
+				<div class="mendCheck_content_left">
+					<span>用户编号</span>
+					<span>当前度数</span>
+					<span>简述</span>
+					<span>备注信息</span>
+				</div>
+				<div class="mendCheck_content_right">
+					<input type="text" name="">
+					<input type="text" name="">
+					<input type="text" name="">
+					<input type="text" name="">
+				</div>
+			</div>
+			<div class="mendCheck_btm_btn"><button type="button">提交</button></div>
+		</div>
+		<div id="mendDeal" style="display: none;">
+			<div class="mendDeal_content">
+				<div class="mendDeal_content_left">
+					<span>用户编号</span>
+					<span>处理结果</span>
+				</div>
+				<div class="mendDeal_content_right">
+					<input type="text" name="" value="S00001">
+					<input type="textarea" name="">
+				</div>
+			</div>
+			<div class="mendDeal_btm_btn"><button type="button">提交</button></div>
+		</div>
+		<div id="reportList" style="display: none;">
+			<div class="reportList_top">
+				<div class="time_input">
+					<span>提交时间:</span>
+					<input type="text" name="">
+					<span>-</span>
+					<input type="text" name="">
+				</div>
+				<div class="type_input">
+					<span>用户编号:</span>
+					<input type="text" name="">
+				</div>
+				<div class="type_input">
+					<span>状态:</span>
+					<input type="text" name="">
+				</div>
+				<div class="type_input">
+					<span>报修人:</span>
+					<input type="text" name="">
+				</div>
+				<div><button type="button">搜索</button></div>
+			</div>
+			<div class="reportList_main">
+				<div class="reportList_title">
+					<div class="reportList_subTitle">用户编号</div>
+					<div class="reportList_subTitle">提交时间</div>
+					<div class="reportList_subTitle">处理状态</div>
+					<div class="reportList_subTitle">处理时间</div>
+					<div class="reportList_subTitle">举报人</div>
+					<div class="reportList_subTitle">处理人</div>
+					<div class="reportList_subTitle">操作</div>
+				</div>
+				<table id="reportList_table"></table>
+			</div>
+		</div>
+		<div id="reportCheck" style="display: none;">
+			<div class="reportCheck_content">
+				<div class="reportCheck_content_left">
+					<span>用户编号</span>
+					<span>描述</span>
+					<span>图片取证</span>
+					<span>处理结果</span>
+				</div>
+				<div class="reportCheck_content_right">
+					<input type="text" name="">
+					<input type="text" name="">
+					<input type="file" name="">
+					<input type="text" name="">
+				</div>
+			</div>
+			<div class="reportCheck_btm_btn"><button type="button">提交</button></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//to the mendList table
+	function forTable_mendList(){
+		var table = document.getElementById("mendList_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["S0001","表坏","2017-06-08","已处理","2017-06-08","Maria","lisi","<button class=\"small_button\">查看</button><button class=\"small_button\">处理</button>"];
+		for (var i = 0; i < 8; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 8; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_mendList();
+	//to the reportList table
+	function forTable_reportList(){
+		var table = document.getElementById("reportList_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["S0001","2017-06-08","已处理","2017-06-08","Maria","lisi","<button class=\"small_button\">查看</button>"];
+		for (var i = 0; i < 8; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 7; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_reportList();
+</script>
+<script type="text/javascript" src="../js/bottom_sidebar.js"></script>
+</body>
+</html>

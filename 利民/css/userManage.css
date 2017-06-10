@@ -1,0 +1,281 @@
+*{
+	margin: 0;
+	padding:0;
+}
+#content{
+	position: relative;
+	height: 600px;
+	margin: 0 auto;
+}
+#list,#show{
+	position: absolute;
+	height: 100%;
+}
+#list{
+	left: 0;
+	width: 180px;
+	background: #005B90;
+}
+#show{
+	margin-top: 20px;
+	padding-right: 20px;
+	left: 200px;
+	right: 0px;
+}
+
+/*list*/
+#list ul {
+	/*width: 80%;*/
+	display: block;
+	color:#FFF;
+}
+li{	
+	list-style: none;
+	cursor: default;
+}
+.listMenu{
+	font-size: 14px;
+	padding: 8px 20px;
+}
+.subListMenu{
+	padding: 5px 20px;
+	font-size: 12px;
+}
+#unfold{
+	position: absolute; 
+    left: 165px;
+    top: 50%;
+    width: 15px; 
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #FFF;
+    background: #3299EA;
+    cursor: pointer;
+} 
+
+/** userModify **/
+#userModify{
+	width: 100%;
+}
+.userModify_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.userModify_content .num_input{
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.num_input input{
+	width: 345px;
+	height: 22px;
+	margin-left: 10px;
+}
+.userModify_content div{
+	float: left;
+	margin-top: 30px;
+}
+.userModify_content .content_search{
+	margin-left: 40px;
+}
+.userModify_content .content_modify{
+	margin-left: 24px;
+}
+.userModify_content div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.userModify_content .content_modify button{
+	background-color: #EFA600;
+}
+.userModify_content .content_bottom{
+	margin-top: 44px;
+	margin-left: 30px;
+}
+.content_bottom img{
+	display: block;
+	float: left;
+	width: 115px;
+	height: 115px;
+}
+.content_bottom div{
+	margin-top: 0;
+}
+.content_bottom .content_left{
+	width: 70px;
+	margin-left: 50px;
+	float: left;
+}
+.content_bottom .content_left span{
+	display: block;
+	text-align: right;
+	margin-bottom: 20px;
+}
+.content_bottom .content_right{
+	margin-left: 10px;
+	float: left;
+}
+.content_bottom .content_right input{
+	width: 254px;
+	height: 22px;
+	display: block;
+	margin-bottom: 15px;
+}
+.userModify_btm_btn{
+	float: right;
+}
+.userModify_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+
+/** userList **/
+#userList{
+	width: 100%;
+}
+.userList_top{
+	height: 85px;
+}
+.userList_top div{
+	float: left;
+	margin-right: 2%;
+	margin-top: 20px;
+}
+.userList_top div input{
+	width: 100px;
+	height: 22px;
+}
+.userList_top div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.userList_main{
+	width: 100%;
+	overflow: hidden;
+}
+.userList_title{
+	width: 100%;
+	overflow: hidden;
+}
+.userList_subTitle{
+	width: 15%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background-color: #ECECEC;
+}
+.userList_subTitle:nth-child(5){
+	width: 10%;
+}
+.userList_subTitle:nth-child(6){
+	width: 20%;
+}
+.userList_subTitle:nth-child(7){
+	width: 10%;
+}
+#userList_table{
+	width: 100%;
+}
+#userList tr:nth-child(odd) td{
+	background-color: #FFF;
+}
+#userList tr:nth-child(even) td{
+	background-color: #FAFAFA;
+}
+#userList tr{
+	display: block;
+}
+#userList td{
+	font-size: 14px;
+	color: #373737;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 15%;
+}
+#userList td:nth-child(5){
+	width: 10%;
+}
+#userList td:nth-child(6){
+	width: 20%;
+}
+#userList td:nth-child(7){
+	width: 10%;
+}
+#userList_table .small_button{
+	width: 70px;
+	height: 30px;
+}
+
+
+/** userAdd **/
+#userAdd{
+	width: 100%;
+}
+.userAdd_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.userAdd_content_left{
+	float: left;
+	width: 8%;
+}
+.userAdd_content_left span{
+	display: block;
+	margin-top: 30px;
+	text-align: right;
+}
+.userAdd_content_right{
+	float: left;
+}
+.userAdd_content_right select{
+	width: 345px;
+	height: 26px;
+	display: block;
+	margin-top: 26px;
+	margin-left: 10px;
+}
+.userAdd_content_right input{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
+	width: 345px;
+	height: 22px;
+}
+.userAdd_content_right .userAdd_r_remark{
+	width: 852px;
+	height: 171px;
+}
+.userAdd_btm_btn{
+	float: right;
+}
+.userAdd_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+

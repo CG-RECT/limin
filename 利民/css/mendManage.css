@@ -1,0 +1,381 @@
+*{
+	margin: 0;
+	padding:0;
+}
+#content{
+	position: relative;
+	height: 600px;
+	margin: 0 auto;
+}
+#list,#show{
+	position: absolute;
+	height: 100%;
+}
+#list{
+	left: 0;
+	width: 180px;
+	background: #005B90;
+}
+#show{
+	margin-top: 20px;
+	padding-right: 20px;
+	left: 200px;
+	right: 0px;
+}
+
+/*list*/
+#list ul {
+	/*width: 80%;*/
+	display: block;
+	color:#FFF;
+}
+li{	
+	list-style: none;
+	cursor: default;
+}
+.listMenu{
+	font-size: 14px;
+	padding: 8px 20px;
+}
+.subListMenu{
+	padding: 5px 20px;
+	font-size: 12px;
+}
+#unfold{
+	position: absolute; 
+    left: 165px;
+    top: 50%;
+    width: 15px; 
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #FFF;
+    background: #3299EA;
+    cursor: pointer;
+} 
+
+/** mendList **/
+#mendList{
+	width: 100%;
+}
+.mendList_top{
+	height: 85px;
+}
+.mendList_top div{
+	float: left;
+	margin-right: 2%;
+	margin-top: 20px;
+}
+.mendList_top div input{
+	width: 100px;
+	height: 22px;
+}
+.mendList_top div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.mendList_main{
+	width: 100%;
+	overflow: hidden;
+}
+.mendList_title{
+	width: 100%;
+	overflow: hidden;
+}
+.mendList_subTitle{
+	width: 10%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background-color: #ECECEC;
+}
+.mendList_subTitle:nth-child(3){
+	width: 15%;
+}
+.mendList_subTitle:nth-child(5){
+	width: 15%;
+}
+.mendList_subTitle:nth-child(8){
+	width: 20%;
+}
+#mendList_table{
+	width: 100%;
+}
+#mendList tr:nth-child(odd) td{
+	background-color: #FFF;
+}
+#mendList tr:nth-child(even) td{
+	background-color: #FAFAFA;
+}
+#mendList tr{
+	display: block;
+}
+#mendList td{
+	font-size: 14px;
+	color: #373737;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 10%;
+}
+#mendList td:nth-child(3){
+	width: 15%;
+}
+#mendList td:nth-child(5){
+	width: 15%;
+}
+#mendList td:nth-child(8){
+	width: 20%;
+}
+#mendList_table .small_button{
+	width: 60px;
+	height: 30px;
+	margin-left: 20px;
+}
+
+
+/** mendCheck **/
+#mendCheck{
+	width: 100%;
+}
+.mendCheck_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.mendCheck_content_left{
+	float: left;
+	width: 8%;
+}
+.mendCheck_content_left span{
+	display: block;
+	margin-top: 30px;
+	text-align: right;
+}
+.mendCheck_content_right{
+	float: left;
+}
+.mendCheck_content_right input{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
+	width: 345px;
+	height: 22px;
+}
+.mendCheck_content_right input:nth-child(3){
+	width: 852px;
+}
+.mendCheck_content_right input:nth-child(4){
+	width: 852px;
+	height: 171px;
+}
+.mendCheck_btm_btn{
+	float: right;
+}
+.mendCheck_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+/** mendDeal **/
+#mendDeal{
+	width: 100%;
+}
+.mendDeal_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.mendDeal_content_left{
+	float: left;
+	width: 8%;
+}
+.mendDeal_content_left span{
+	display: block;
+	margin-top: 30px;
+	text-align: right;
+}
+.mendDeal_content_right{
+	float: left;
+}
+.mendDeal_content_right input{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
+	width: 345px;
+	height: 22px;
+}
+.mendDeal_content_right input:nth-child(2){
+	width: 852px;
+	height: 171px;
+}
+.mendDeal_btm_btn{
+	float: right;
+}
+.mendDeal_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+/** reportList **/
+#reportList{
+	width: 100%;
+}
+.reportList_top{
+	height: 85px;
+}
+.reportList_top div{
+	float: left;
+	margin-right: 2%;
+	margin-top: 20px;
+}
+.reportList_top div input{
+	width: 100px;
+	height: 22px;
+}
+.reportList_top div button{
+	width: 85px;
+	height: 26px;
+	background-color: #98CD00;
+	color: white;
+	border: none;
+}
+.reportList_main{
+	width: 100%;
+	overflow: hidden;
+}
+.reportList_title{
+	width: 100%;
+	overflow: hidden;
+}
+.reportList_subTitle{
+	width: 10%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background-color: #ECECEC;
+}
+.reportList_subTitle:nth-child(1){
+	width: 15%;
+}
+.reportList_subTitle:nth-child(2){
+	width: 20%;
+}
+.reportList_subTitle:nth-child(4){
+	width: 20%;
+}
+.reportList_subTitle:nth-child(7){
+	width: 15%;
+}
+#reportList_table{
+	width: 100%;
+}
+#reportList tr:nth-child(odd) td{
+	background-color: #FFF;
+}
+#reportList tr:nth-child(even) td{
+	background-color: #FAFAFA;
+}
+#reportList tr{
+	display: block;
+}
+#reportList td{
+	font-size: 14px;
+	color: #373737;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 10%;
+}
+#reportList td:nth-child(1){
+	width: 15%;
+}
+#reportList td:nth-child(2){
+	width: 20%;
+}
+#reportList td:nth-child(4){
+	width: 20%;
+}
+#reportList td:nth-child(7){
+	width: 15%;
+}
+#reportList_table .small_button{
+	width: 60px;
+	height: 30px;
+}
+
+
+/** reportCheck **/
+#reportCheck{
+	width: 100%;
+}
+.reportCheck_content{
+	overflow: hidden;
+	width: 100%;
+	border: solid 1px lightgray;
+	padding-bottom: 40px;
+}
+.reportCheck_content_left{
+	float: left;
+	width: 8%;
+}
+.reportCheck_content_left span{
+	display: block;
+	margin-top: 30px;
+	text-align: right;
+}.reportCheck_content_left span:nth-child(3){
+	margin-top: 130px;
+}
+.reportCheck_content_right{
+	float: left;
+}
+.reportCheck_content_right input{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
+	width: 345px;
+	height: 22px;
+}
+.reportCheck_content_right input:nth-child(2){
+	width: 852px;
+	height: 126px;
+}
+.reportCheck_content_right input:nth-child(4){
+	width: 831px;
+}
+.reportCheck_btm_btn{
+	float: right;
+}
+.reportCheck_btm_btn button{
+	margin-top: 30px;
+	margin-right: 20px;
+	border: none;
+	width: 200px;
+	height: 60px;
+	color: white;font-size: 20px;
+	background-color: #00ABEF;
+}
+
+
+

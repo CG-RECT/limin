@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/userManage.css">
+	<script type="text/javascript" src="../js/vendor/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="list">
+		<ul>
+			<li class="listMenu" style="background: #FFF;color: #005B90;" onclick="change(this,'userModify')">修改用户信息</li>
+			<li class="listMenu" onclick="change(this,'userList')">用户列表</li>
+			<li class="listMenu" onclick="change(this,'userAdd')">添加用户</li>
+		</ul>
+	</div>
+	<div id="unfold" onclick="fold(this)"></div>
+	<div id="show">
+		<div id="userModify">
+			<div class="userModify_content">
+				<div class="num_input">
+					<span>用户编号</span>
+					<input type="text" name="">
+				</div>
+				<div class="content_search"><button type="button">搜索</button></div>
+				<div class="content_modify"><button type="button">修改</button></div>
+				<div class="content_bottom">
+					<img src="../image/user_pic.png">
+					<div class="content_left">
+						<span>用户姓名</span>
+						<span>地址</span>
+						<span>联系方式</span>
+					</div>
+					<div class="content_right">
+						<input type="text" name="" value="张三">
+						<input type="text" name="" value="哈尔滨师范大学">
+						<input type="text" name="" value="13788889966">
+					</div>
+				</div>
+			</div>			
+			<div class="userModify_btm_btn"><button type="button">提交</button></div>
+		</div>
+		<div id="userList" style="display: none;">
+			<div class="userList_top">
+					<div class="time_input">
+						<span>导入系统时间:</span>
+						<input type="text" name="">
+						<span>-</span>
+						<input type="text" name="">
+					</div>
+					<div class="type_input">
+						<span>支付类型:</span>
+						<input type="text" name="">
+					</div>
+					<div class="type_input">
+						<span>编号:</span>
+						<input type="text" name="">
+					</div>
+					<div class="type_input">
+						<span>用户名:</span>
+						<input type="text" name="">
+					</div>
+					<div><button type="button">搜索</button></div>
+				</div>
+				<div class="userList_main">
+					<div class="userList_title">
+						<div class="userList_subTitle">用户编号</div>
+						<div class="userList_subTitle">用户名称</div>
+						<div class="userList_subTitle">地址</div>
+						<div class="userList_subTitle">联系方式</div>
+						<div class="userList_subTitle">备注</div>
+						<div class="userList_subTitle">最后一次缴费日期</div>
+						<div class="userList_subTitle">操作</div>
+					</div>
+					<table id="userList_table"></table>
+				</div>
+			</div>
+		<div id="userAdd" style="display: none;">
+			<div class="userAdd_content">
+				<div class="userAdd_content_left">
+					<span>用户编号</span>
+					<span>用户名称</span>
+					<span>用户类型</span>
+					<span>表信息</span>
+					<span>备注</span>
+				</div>
+				<div class="userAdd_content_right">
+					<input type="text" name="">
+					<input type="text" name="">
+					<input type="text" name="">
+					<select>
+						<option>企业用户</option>
+						<option>个人用户</option>
+					</select>
+					<input type="text" name="" class="userAdd_r_remark">
+				</div>
+			</div>
+			<div class="userAdd_btm_btn"><button type="button">提交</button></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//to the paymentStatis table
+	function forTable_userList(){
+		var table = document.getElementById("userList_table");
+		var tableInnerHTML = table.innerHTML;
+		var tbody = "";
+		var data = ["S0001","zhaoliu","哈尔滨利民区","13999997777","备注信息","2017-06-08","<button class=\"small_button\">查看详情</button>"];
+		for (var i = 0; i < 8; i++){
+			tbody+="<tr>"
+			for (var j = 0; j < 7; j++){
+				tbody+="<td>";
+				tbody+=data[j];
+				tbody+="</td>";
+			}
+			tbody+="</tr>";
+		}
+		tableInnerHTML += tbody;
+		table.innerHTML = tableInnerHTML;
+	}
+	forTable_userList();
+</script>
+<script type="text/javascript" src="../js/bottom_sidebar.js"></script>
+</body>
+</html>
