@@ -2,6 +2,13 @@
 	margin: 0;
 	padding:0;
 }
+input{
+	font-size: 15px;
+}
+textarea{
+	font-size: 15px;
+	border: solid 1px lightgray;
+}
 #content{
 	position: relative;
 	height: 600px;
@@ -172,10 +179,17 @@ li{
 .mendCheck_content_right input:nth-child(3){
 	width: 852px;
 }
-.mendCheck_content_right input:nth-child(4){
+.mendCheck_content_right textarea{
 	width: 852px;
 	height: 171px;
+	display: block;
+    margin-top: 27px;
+    margin-left: 10px;
 }
+/*.mendCheck_content_right input:nth-child(4){
+	width: 852px;
+	height: 171px;
+}*/
 .mendCheck_btm_btn{
 	float: right;
 }
@@ -218,10 +232,17 @@ li{
 	width: 345px;
 	height: 22px;
 }
-.mendDeal_content_right input:nth-child(2){
+.mendDeal_content_right textarea{
 	width: 852px;
 	height: 171px;
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
 }
+/*.mendDeal_content_right input:nth-child(2){
+	width: 852px;
+	height: 171px;
+}*/
 .mendDeal_btm_btn{
 	float: right;
 }
@@ -357,11 +378,18 @@ li{
 	width: 345px;
 	height: 22px;
 }
-.reportCheck_content_right input:nth-child(2){
+.reportCheck_content_right textarea{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
 	width: 852px;
 	height: 126px;
 }
-.reportCheck_content_right input:nth-child(4){
+/*.reportCheck_content_right input:nth-child(2){
+	width: 852px;
+	height: 126px;
+}*/
+.reportCheck_content_right .right_result{
 	width: 831px;
 }
 .reportCheck_btm_btn{

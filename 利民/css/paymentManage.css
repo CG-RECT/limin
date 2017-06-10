@@ -2,6 +2,13 @@
 	margin: 0;
 	padding:0;
 }
+input{
+	font-size: 15px;
+}
+textarea{
+	font-size: 15px;
+	border: solid 1px lightgray;
+}
 #content{
 	position: relative;
 	height: 600px;
@@ -283,6 +290,11 @@ li{
 	vertical-align: top;
 }
 .treatmentResult_content .result_input input{
+	margin-left: 10px;
+	width: 852px;
+	height: 171px;
+}
+.treatmentResult_content .result_input textarea{
 	margin-left: 10px;
 	width: 852px;
 	height: 171px;

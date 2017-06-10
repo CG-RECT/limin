@@ -2,6 +2,13 @@
 	margin: 0;
 	padding:0;
 }
+input{
+	font-size: 15px;
+}
+textarea{
+	font-size: 15px;
+	border: solid 1px lightgray;
+}
 #content{
 	position: relative;
 	height: 600px;
@@ -315,10 +322,17 @@ li{
 .repair_content_right input:nth-child(3){
 	width: 852px;
 }
-.repair_content_right input:nth-child(4){
+.repair_content_right textarea{
 	width: 852px;
 	height: 171px;
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
 }
+/*.repair_content_right input:nth-child(4){
+	width: 852px;
+	height: 171px;
+}*/
 .repair_btm_btn{
 	float: right;
 }
@@ -367,10 +381,17 @@ li{
 	width: 345px;
 	height: 22px;
 }
-.report_content_right input:nth-child(2){
+.report_content_right textarea{
 	width: 852px;
 	height: 171px;
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
 }
+/*.report_content_right input:nth-child(2){
+	width: 852px;
+	height: 171px;
+}*/
 .report_btm_btn{
 	float: right;
 }

@@ -2,6 +2,13 @@
 	margin: 0;
 	padding:0;
 }
+input{
+	font-size: 15px;
+}
+textarea{
+	font-size: 15px;
+	border: solid 1px lightgray;
+}
 #content{
 	position: relative;
 	height: 600px;
@@ -262,6 +269,9 @@ li{
 	height: 22px;
 }
 .userAdd_content_right .userAdd_r_remark{
+	display: block;
+	margin-top: 27px;
+	margin-left: 10px;
 	width: 852px;
 	height: 171px;
 }
